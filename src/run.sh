@@ -23,7 +23,7 @@ if [[ -n "${INPUT_WORKDIR}" ]]; then
 fi
 
 echo -e "${BLACKBOX_PUBKEY}" | gpg --import --no-tty --batch --yes
-echo -e "${BLACKBOX_PRIVKEY}" | gpg --import --no-tty --batch --yes
+echo -e "${BLACKBOX_PRIVKEY}" | base64 decode | gpg --import --no-tty --batch --yes
 
 cd ${GITHUB_WORKSPACE%/}/${__workdir}
 
