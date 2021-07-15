@@ -10,4 +10,4 @@ RUN apt-get update && apt-get install -y gnupg && rm -rf /var/lib/apt/lists/*
 USER 1001
 COPY ["src", "/src/"]
 
-ENTRYPOINT ["/run.sh"]
+ENTRYPOINT ["/src/run.sh"]
