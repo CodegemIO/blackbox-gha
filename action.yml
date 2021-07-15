@@ -1,0 +1,12 @@
+name: "Blackbox GitHub Actions"
+description: "Allows use of blackbox in GitHub Actions."
+inputs:
+  command:
+    description: "blackbox command to run"
+    required: true
+  workdir:
+    description: "blackbox project working directory"
+    default: "."
+runs:
+  using: "docker"
+  image: "./Dockerfile"
